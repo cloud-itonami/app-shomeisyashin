@@ -1,4 +1,4 @@
 {:schema "etzhayyim.migration/v1"
  :source {:repository "etzhayyim/root" :revision "c9e7df4b327a3ee7b5ed25fb3480db45553c33ed" :path "60-apps/etzhayyim-project-shomeisyashin" :tree "8936a6df448e6a6d7c4cb5a8e997bcecdfa9002b" :tracked-files 12 :bytes 7567}
  :destination {:repository "cloud-itonami/app-shomeisyashin"}
- :identity {:allowed-additions ["README.edn" "migration.edn"]}}
+ :identity {:allowed-additions ["README.edn" "migration.edn" "README.md" "docs/operator-quickstart.md" "docs/verify-custody.cljs"]}}
