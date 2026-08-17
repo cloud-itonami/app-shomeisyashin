@@ -14,7 +14,7 @@ git clone https://github.com/cloud-itonami/app-shomeisyashin
 cd app-shomeisyashin
 ```
 
-`git ls-files` は 15 ファイル（この文書と `docs/` と `README.md` を含む）。
+`git ls-files` は 17 ファイル（この文書と `docs/` と `README.md` を含む）。
 そのうち**保管対象は 12**（§2 で検査する）。
 
 ## 2. 保管されていることを検査する（network 不要）
