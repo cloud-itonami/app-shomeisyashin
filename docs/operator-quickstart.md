@@ -22,8 +22,8 @@ cd app-shomeisyashin
 この repo は `etzhayyim/root` からの抽出物なので、まず「出所と同一か」を確かめる。
 
 ```bash
-nbb docs/verify-custody.cljk            # ローカルのみ
-nbb docs/verify-custody.cljk --origin   # 出所 GitHub の実 tree とも突き合わせる
+kbb --backend sci docs/verify-custody.cljk            # ローカルのみ
+kbb --backend sci docs/verify-custody.cljk --origin   # 出所 GitHub の実 tree とも突き合わせる
 ```
 
 `--origin` まで含めた実測（exit 0）:
@@ -162,7 +162,7 @@ node <superproject>/scripts/resource-guard.mjs run build -- pnpm --filter ./pack
 
 ```bash
 printf '\n' >> CLAUDE.md
-nbb docs/verify-custody.cljk ; echo "exit=$?"
+kbb --backend sci docs/verify-custody.cljk ; echo "exit=$?"
 git checkout CLAUDE.md          # 戻す
 ```
 

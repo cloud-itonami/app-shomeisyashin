@@ -138,8 +138,8 @@ tree                    :  8936a6df448e6a6d7c4cb5a8e997bcecdfa9002b
 改変も捕まる。
 
 ```bash
-nbb docs/verify-custody.cljk            # ローカルのみ
-nbb docs/verify-custody.cljk --origin   # 出所 GitHub の実 tree とも突き合わせる
+kbb --backend sci docs/verify-custody.cljk            # ローカルのみ
+kbb --backend sci docs/verify-custody.cljk --origin   # 出所 GitHub の実 tree とも突き合わせる
 ```
 
 実測は 4 件すべて ok（exit 0）で、**出所 GitHub の実 tree とも一致する** ——
