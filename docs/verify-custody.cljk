@@ -9,8 +9,8 @@
 ;; 通してしまう。git の tree オブジェクトを再構成して migration.edn の
 ;; :source :tree と突き合わせる。
 ;;
-;;   nbb docs/verify-custody.cljs            # ローカルのみ（network 不要）
-;;   nbb docs/verify-custody.cljs --origin   # 出所 GitHub の実 tree とも突き合わせる
+;;   nbb docs/verify-custody.cljk            # ローカルのみ（network 不要）
+;;   nbb docs/verify-custody.cljk --origin   # 出所 GitHub の実 tree とも突き合わせる
 ;;
 ;; exit 0 = PASS / 1 = FAIL / 3 = 判定できなかった（0 でも 1 でもない）
 ;;
@@ -21,7 +21,7 @@
 ;;   tracked file を編集して commit していない状態は「tree ok / バイト FAIL」に
 ;;   なる。これは仕様で、未 commit の改変も捕まえるためにこうしてある。
 ;;
-;; 出所: この検査器は cloud-itonami/app-roukisho・app-saiban の docs/verify-custody.cljs と
+;; 出所: この検査器は cloud-itonami/app-roukisho・app-saiban の docs/verify-custody.cljk と
 ;; 同じものである。migration.edn の形（:source :tree / :tracked-files / :bytes と
 ;; :identity :allowed-additions）が抽出 repo 全体で共通なので、検査に repo 固有の
 ;; 定数が 1 つも要らない。**この段落は複製であることの宣言であって、言い訳ではない**

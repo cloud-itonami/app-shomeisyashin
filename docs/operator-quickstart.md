@@ -22,8 +22,8 @@ cd app-shomeisyashin
 この repo は `etzhayyim/root` からの抽出物なので、まず「出所と同一か」を確かめる。
 
 ```bash
-nbb docs/verify-custody.cljs            # ローカルのみ
-nbb docs/verify-custody.cljs --origin   # 出所 GitHub の実 tree とも突き合わせる
+nbb docs/verify-custody.cljk            # ローカルのみ
+nbb docs/verify-custody.cljk --origin   # 出所 GitHub の実 tree とも突き合わせる
 ```
 
 `--origin` まで含めた実測（exit 0）:
@@ -162,7 +162,7 @@ node <superproject>/scripts/resource-guard.mjs run build -- pnpm --filter ./pack
 
 ```bash
 printf '\n' >> CLAUDE.md
-nbb docs/verify-custody.cljs ; echo "exit=$?"
+nbb docs/verify-custody.cljk ; echo "exit=$?"
 git checkout CLAUDE.md          # 戻す
 ```
 
@@ -192,7 +192,7 @@ commit まで済ませた改変は tree 側が落ちる。`:tree` と `:bytes` �
 文書を足すときは `:identity :allowed-additions` に足す。現在の許可リスト:
 
 ```clojure
-["README.edn" "migration.edn" "README.md" "docs/operator-quickstart.md" "docs/verify-custody.cljs"]
+["README.edn" "migration.edn" "README.md" "docs/operator-quickstart.md" "docs/verify-custody.cljk"]
 ```
 
 保管対象の 12 ファイルは編集しない。`README.md` §4 が列挙した食い違い（`wasm/` パス・
