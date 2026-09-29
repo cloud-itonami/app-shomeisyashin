@@ -7,7 +7,7 @@
 **保管されている 12 ファイルは出所とバイト単位で同一で、そのことは暗号学的に検査できる**
 （§5）。出所 GitHub の実 tree とも一致している。
 
-読む前に知っておくべきことが 1 つある。**`CLAUDE.md` が説明している機能は、この repo に
+読む前に知っておくべきことが 1 つある。**`AGENTS.md` が説明している機能は、この repo に
 1 行も実装されていない。** ここに在るのは「Vite entry scaffold」と自称する 453 バイトの
 Svelte スタブである（§2・§3）。
 
@@ -20,7 +20,7 @@ Svelte スタブである（§2・§3）。
 
 | 層 | 数 | バイト | 何か |
 |---|---|---|---|
-| **保管対象**（出所からそのまま） | **12** | **7,567** | `CLAUDE.md` `NOTICE` と `appview/` 配下すべて |
+| **保管対象**（出所からそのまま） | **12** | **7,567** | `AGENTS.md` `NOTICE` と `appview/` 配下すべて |
 | 抽出時の生成レコード | 2 | 可変 | `README.edn` / `migration.edn` |
 | 後から足した文書（保管対象ではない） | 3 | 可変 | この `README.md` と `docs/` の 2 本 |
 
@@ -35,7 +35,7 @@ Svelte スタブである（§2・§3）。
 
 | | ファイル | バイト |
 |---|---|---|
-| 文書 | `CLAUDE.md` | 2,060 |
+| 文書 | `AGENTS.md` | 2,060 |
 | 文書 | `NOTICE` | 513 |
 | 配備記述 | `appview/…/kotodama.jsonld` | 2,391 |
 | スカフォールド | `svelte/` 配下 9 ファイル | 2,603 |
@@ -43,16 +43,16 @@ Svelte スタブである（§2・§3）。
 **サーバ・API・worker のソースは 1 ファイルも無い。** `.ts` は 3 つあるが、その内訳は
 `main.ts`(122 B) / `svelte.d.ts`(136 B) / `vite.config.ts`(206 B) で、すべて足場である。
 
-## 2. `CLAUDE.md` が説明している機能は入っていない
+## 2. `AGENTS.md` が説明している機能は入っていない
 
-`CLAUDE.md` は次を表として記述している —— いずれも**この repo には無い**:
+`AGENTS.md` は次を表として記述している —— いずれも**この repo には無い**:
 
-| `CLAUDE.md` の主張 | この repo の実物 |
+| `AGENTS.md` の主張 | この repo の実物 |
 |---|---|
 | XRPC コマンド 4 種（`UploadPhoto` / `GenerateIDPhoto` / `ListPhotos` / `GetPhoto`） | 実装ファイルが**存在しない** |
 | murakumo VL (qwen3-vl-8b) による顔検出・背景解析 | 呼び出し箇所 **0** |
 | グラフノード 2 種（`:Photo` / `:IDPhoto`） | スキーマ定義も SQL も**無い** |
-| 証明写真フォーマット 6 種（`passport_jp` 35x45 ほか） | 表は `CLAUDE.md` の散文に 6 行あるだけで、実装は**無い** |
+| 証明写真フォーマット 6 種（`passport_jp` 35x45 ほか） | 表は `AGENTS.md` の散文に 6 行あるだけで、実装は**無い** |
 | `component.wasm`（`kotodama.jsonld` の `component.path`） | **ファイルが無い** |
 
 UI として実在するのは `svelte/src/App.svelte`（453 B）だけで、その中身は次で全部である:
@@ -99,8 +99,8 @@ dist/assets/index-CjVA8Rgd.js   2.68 kB
 
 | 場所 | 記録 | 実際 |
 |---|---|---|
-| `CLAUDE.md:22` | コンポーネントは `wasm/etzhayyim-wasm-shomeisyashin-f901c7i4/` | ディレクトリは **`appview/`**。`wasm/` は存在しない |
-| `CLAUDE.md:53` | `cd 60-apps/etzhayyim-project-shomeisyashin/wasm/…` | 抽出前の monorepo のパス。この repo に無い |
+| `AGENTS.md:22` | コンポーネントは `wasm/etzhayyim-wasm-shomeisyashin-f901c7i4/` | ディレクトリは **`appview/`**。`wasm/` は存在しない |
+| `AGENTS.md:53` | `cd 60-apps/etzhayyim-project-shomeisyashin/wasm/…` | 抽出前の monorepo のパス。この repo に無い |
 | `kotodama.jsonld:5` | `component.path: "component.wasm"` | **ファイルが無い** |
 | `kotodama.jsonld:83` | `staticDir: "/wasm/svelte/dist"` | `appview/` と噛み合わない |
 | `kotodama.jsonld:3` | `@id: did:web:`**`syo`**`meisyashin.etzhayyim.com` | `name`/`project` は **`sho`**`meisyashin`。綴りが 2 通りあり、`routes` は両方を挙げている |
@@ -115,7 +115,7 @@ dist/assets/index-CjVA8Rgd.js   2.68 kB
 |---|---|
 | `shomeisyashin.etzhayyim.com` | **NXDOMAIN** |
 | `syomeisyashin.etzhayyim.com` | **NXDOMAIN** |
-| `f901c7i4.etzhayyim.com`（`CLAUDE.md` の smoke URL） | **NXDOMAIN** |
+| `f901c7i4.etzhayyim.com`（`AGENTS.md` の smoke URL） | **NXDOMAIN** |
 | `etzhayyim.com` | 解決する（`172.67.179.128`） |
 | `https://etzhayyim.com/ns/kotodama/v1`（JSON-LD の `@context`） | **404** |
 
