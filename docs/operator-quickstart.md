@@ -50,7 +50,7 @@ PASS — 保管対象 12 ファイルは出所と同一
 
 ## 3. ビルドする —— この repo 単体では**できない**
 
-`CLAUDE.md` の Build & Deploy 節はこう書いている:
+`AGENTS.md` の Build & Deploy 節はこう書いている:
 
 ```bash
 cd 60-apps/etzhayyim-project-shomeisyashin/wasm/etzhayyim-wasm-shomeisyashin-f901c7i4/svelte
@@ -136,7 +136,7 @@ node <superproject>/scripts/resource-guard.mjs run build -- pnpm --filter ./pack
 
 ## 5. デプロイ —— 宛先が存在しない
 
-`CLAUDE.md` の deploy 節は `--smoke-url https://f901c7i4.etzhayyim.com/health` を使う。
+`AGENTS.md` の deploy 節は `--smoke-url https://f901c7i4.etzhayyim.com/health` を使う。
 2026-08-18 実測（`host`）:
 
 | 名前 | 結果 |
@@ -161,9 +161,9 @@ node <superproject>/scripts/resource-guard.mjs run build -- pnpm --filter ./pack
 検査は「落ちること」を見て初めて検査になる。**保管対象を 1 バイト変えて再実行する:**
 
 ```bash
-printf '\n' >> CLAUDE.md
+printf '\n' >> AGENTS.md
 kbb --backend sci docs/verify-custody.cljk ; echo "exit=$?"
-git checkout CLAUDE.md          # 戻す
+git checkout AGENTS.md          # 戻す
 ```
 
 実測（exit 1）:
